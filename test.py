@@ -18,21 +18,21 @@ class TestDebouncer(unittest.TestCase):
         self.v.stop()
 
     def pin_listener(self, pin_number, pin_level):
-        if pin_number == 5 and pin_level == 1:
+        if pin_number == 17 and pin_level == 1:
             self.is_led_on = True
             self.times_pressed = self.times_pressed + 1
 
     def test_debouncer(self):
-        self.v.UserButton.on()
+        self.v.BUTTON1.on()
         self.v.run_for_ms(10)
-        self.v.UserButton.off()
+        self.v.BUTTON1.off()
         self.v.run_for_ms(10)
-        self.v.UserButton.on()
+        self.v.BUTTON1.on()
         self.v.run_for_ms(10)
-        self.v.UserButton.off()
+        self.v.BUTTON1.off()
         self.v.run_for_ms(10)
-        self.v.UserButton.on()
-        self.v.UserButton.off()
+        self.v.BUTTON1.on()
+        self.v.BUTTON1.off()
         self.v.run_for_ms(280)
         self.assertEqual(self.is_led_on, True)
         self.assertEqual(self.times_pressed, 1)

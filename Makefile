@@ -720,7 +720,7 @@ LD_SYS_LIBS :=-Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys  -Wl,--e
 
 .PHONY: all lst size
 
-all: $(PROJECT).bin $(PROJECT)-combined.hex size
+all: $(PROJECT).bin
 
 
 .s.o:
@@ -766,11 +766,6 @@ $(PROJECT).bin: $(PROJECT).elf
 $(PROJECT).hex: $(PROJECT).elf
 	$(ELF2BIN) -O ihex $< $@
 
-
-$(PROJECT)-combined.hex: $(PROJECT).hex
-	+@echo "NOTE: the $(SREC_CAT) binary is required to be present in your PATH. Please see http://srecord.sourceforge.net/ for more information."
-	$(SREC_CAT) .././mbed-os/targets/TARGET_NORDIC/TARGET_NRF5/TARGET_MCU_NRF52832/sdk/softdevice/s132/hex/s132_nrf52_2.0.0_softdevice.hex  -intel $(PROJECT).hex -intel -o $(PROJECT)-combined.hex -intel --line-length=44
-	+@echo "===== hex file ready to flash: $(OBJDIR)/$@ ====="
 
 # Rules
 ###############################################################################
