@@ -1,0 +1,78 @@
+{
+	"description": "Nrf52-DK",
+	"components": [
+		{
+			"name": "nrf52832",
+			"id": 0,
+			"type": "MCU",
+			"class": "Nrf52832"
+		},
+		{
+			"name": "ResetButton",
+			"id": 2,
+			"type": "Peripheral",
+			"class": "Button",
+			"config": {
+				"pins": {
+					"in": 21
+				}
+			}
+		},
+		{
+			"name": "BUTTON1",
+			"id": 3,
+			"type": "Peripheral",
+			"class": "Button",
+			"config": {
+				"pins": {
+					"in": 13
+				}
+			}
+		},
+		{
+			"name": "BUTTON2",
+			"id": 4,
+			"type": "Peripheral",
+			"class": "Button",
+			"config": {
+				"pins": {
+					"in": 14
+				}
+			}
+		},
+		{
+			"name": "BUTTON3",
+			"id": 5,
+			"type": "Peripheral",
+			"class": "Button",
+			"config": {
+				"pins": {
+					"in": 15
+				}
+			}
+		},
+		{
+			"name": "BUTTON4",
+			"id": 6,
+			"type": "Peripheral",
+			"class": "Button",
+			"config": {
+				"pins": {
+					"in": 16
+				}
+			}
+		},
+		{
+			"name": "SHORT_0",
+			"id": 7,
+			"type": "Peripheral",
+			"class": "Short",
+			"config": {
+				"pins": {
+					"pin0": 2,
+					"pin1": 4
+				}
+			}
+		}
+	]
+}
