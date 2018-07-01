@@ -9,6 +9,9 @@ jobs:
           name: install mbed
           command: pip install mbed-cli && mbed config -G ARM_PATH /usr/bin 
       - run:
+          name: install srecord
+          command: apt-get update && apt-get install -y srecord
+      - run:
           name: build
           command: make
       - run:
