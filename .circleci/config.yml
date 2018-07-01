@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: jumperio/vlab-gcc-arm:latest
+    steps:
+      - checkout
+      - run:
+          name: install mbed
+          command: pip install mbed-cli && mbed config -G ARM_PATH /usr/bin 
+      - run:
+          name: build
+          command: make
+      - run:
+          name: test
+          command: python test.py
+      - store_artifacts:
+          path: BUILD/
