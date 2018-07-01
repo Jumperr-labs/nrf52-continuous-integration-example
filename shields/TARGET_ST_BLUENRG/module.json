@@ -1,0 +1,37 @@
+{
+  "name": "x-nucleo-idb0xa1",
+  "version": "2.2.0",
+  "description": "ST driver for the mbed BLE API.",
+  "keywords": [
+    "expansion",
+    "board",
+    "x-nucleo",
+    "nucleo",
+    "ST",
+    "STM",
+    "Bluetooth",
+    "BLE"
+  ],
+  "author": "Andrea Palmieri",
+  "repository": {
+    "url": "https://github.com/ARMmbed/ble-x-nucleo-idb0xa1.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/ARMmbed/ble-x-nucleo-idb0xa1",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "extraIncludes": [
+    "x-nucleo-idb0xa1",
+    "x-nucleo-idb0xa1/utils",
+    "x-nucleo-idb0xa1/platform",
+    "x-nucleo-idb0xa1/bluenrg-hci"
+  ],
+  "dependencies": {
+    "mbed-drivers": ">=0.11.3",
+    "ble": "^2.7.0"
+  }
+}
